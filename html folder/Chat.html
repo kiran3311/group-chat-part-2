@@ -46,26 +46,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+
+
+       window.onload= function(){
+
         let getName = JSON.parse(localStorage.getItem('logedinUser'))
-
         if(getName){
-
-        }
-
-        else{
-            window.location.href='./welcome.html'
-        }
-
-
-        let userName = getName.name
+            let userName = getName.name
         var userEmail = getName.email
         document.getElementById('userName').innerHTML = userName
-
-
-
-
-
-
+        
         let msgArr = JSON.parse(localStorage.getItem('msg')) ? JSON.parse(localStorage.getItem('msg')) : []
 
 
@@ -121,6 +111,33 @@
                 msgFunction()
             }
         })
+
+
+
+
+        }
+        else{
+
+            window.location.href='./welcome.html'
+
+        }
+
+        
+       }
+   
+
+        
+
+        
+
+        
+
+
+        
+
+
+
+
 
 
 

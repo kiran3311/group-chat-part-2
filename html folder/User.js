@@ -1,3 +1,18 @@
+
+  window.onload= function(){
+
+    let getName = JSON.parse(localStorage.getItem('logedinUser'))
+    if(getName){
+     return true
+
+    }
+  else{
+    window.location.href='./welcome.html'
+    return false
+  }
+  }
+
+
 var userdata = JSON.parse(localStorage.getItem('user'))
         var html = "<table border ='1|1' id='users' class='usertable'>"
             html += `<thead class="head">`
